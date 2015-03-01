@@ -69,14 +69,12 @@
 #about {
   background-color: #000;
   background-image: url('../img/use_your_illusion.png');
-  background-image: url('../img/basement.JPG');
+  background-image: url('../img/f100.JPG');
   background-size: cover;
 }
 
 #contact {
-   background-image: url('../img/tearoom.JPG');
-  background-size: cover;
-
+  background-color: #fff;
 }
 #about .flyer { opacity: 1;}
 
