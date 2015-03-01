@@ -69,7 +69,7 @@
 #about .flyer { opacity: 1;}
 
 #fellowship {
-  background-image: url('/img/chalkboard.jpg');
+  background-image: url('/x/img/chalkboard.jpg');
   background-size: cover;
 }
 #fellowship .flyer { opacity: 1; }
@@ -79,7 +79,7 @@ video#bgvid {
   width: 70hw; 
   height: 70vw; 
   z-index: -100;
-  background: url(polina.jpg) no-repeat;
+  /*background: url(polina.jpg) no-repeat;*/
   background-size: cover;
   opacity: 0.6;
 }
