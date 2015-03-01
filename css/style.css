@@ -61,7 +61,7 @@
 }
 
 #events {
-   background-image: url('../img/f100.jpg');
+   background-image: url('../img/f100.JPG');
   background-size: cover;
 
 }
@@ -69,12 +69,12 @@
 #about {
   background-color: #000;
   background-image: url('../img/use_your_illusion.png');
-  background-image: url('../img/basement.jpg');
+  background-image: url('../img/basement.JPG');
   background-size: cover;
 }
 
 #contact {
-   background-image: url('../img/tearoom.jpg');
+   background-image: url('../img/tearoom.JPG');
   background-size: cover;
 
 }
