@@ -68,8 +68,7 @@
 
 #about {
   background-color: #000;
-  background-image: url('../img/use_your_illusion.png');
-  background-image: url('../img/f100.JPG');
+  background-image: url('../img/grandhall.png');
   background-size: cover;
 }
 
@@ -79,7 +78,7 @@
 #about .flyer { opacity: 1;}
 
 #fellowship {
-  background-image: url('../img/chalkboard.jpg');
+  background-image: url('../img/chalk2.png');
   background-size: cover;
 }
 #fellowship .flyer { opacity: 1; }
