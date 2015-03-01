@@ -63,7 +63,7 @@
 #about {
   background-color: #000;
   background-image: url('../img/use_your_illusion.png');
-  background-image: url('../img/f100.jpg');
+  background-image: url('/x/img/f100.jpg');
   background-size: cover;
 }
 #about .flyer { opacity: 1;}
