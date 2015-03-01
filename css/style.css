@@ -1,0 +1,236 @@
+@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900');
+
+/* 62px */
+/* 52px */
+/* 40px */
+/* 29px */
+/* 28px */
+/* 24px */
+
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-device-width: 480px) {
+
+  body {
+    margin: 0;
+  }
+  .screen {
+    background-image: url('/img/use_your_illusion.png');
+    padding-top: 0 !important;
+  }
+
+  video#bgvid { display: none;}
+
+  #events .flyer {
+    padding-top: 60px !important;
+    height: 100vh !important;
+  }
+  #contact .flyer {
+    padding-top: 100px !important;
+    height: 100vh !important;
+  }
+
+  .flyer {
+    background: url('../img/dust.png');
+    opacity: 1 !important;
+    width: 100% !important;
+    margin-top: 1px !important; 
+    height: 100% @important;
+  }
+  header {
+    border-bottom: 1px solid #666;
+  }
+
+  #logo {
+    position: relative !important;
+    z-index: 300;
+  }
+  .nav {
+    display: none;
+  }
+
+}
+
+.screen {
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-top: 15vh;
+
+}
+
+#about {
+  background-color: #000;
+  background-image: url('/img/use_your_illusion.png');
+  background-image: url('/img/f100.jpg');
+  background-size: cover;
+}
+#about .flyer { opacity: 1;}
+
+#fellowship {
+  background-image: url('/img/chalkboard.jpg');
+  background-size: cover;
+}
+#fellowship .flyer { opacity: 1; }
+
+video#bgvid {
+  position: fixed; right: 0; bottom: 0; top: 0;
+  width: 70hw; 
+  height: 70vw; 
+  z-index: -100;
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: black;
+  /*
+  background: url('../img/use_your_illusion.png');
+  background-repeat: repeat;
+  */
+  min-height: 100%;
+  min-width: 100%;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+header {
+  height: 52px;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+header .nav {
+  line-height: 3.75em;
+}
+
+header .nav a {
+  color: #333 !important;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: normal;
+  margin-right: 25px;
+}
+
+header .nav a:hover {
+  text-decoration: underline;
+  background: none !important;
+}
+
+.flyer {
+  background: url('../img/dust.png');
+  opacity: 0.9;
+  width: 60%;
+  padding: 40px;
+
+}
+
+#events .flyer {
+  padding: 70px;
+}
+#events .flyer h3 {
+  font-size: 20px;
+}
+
+.flyer ul {
+  text-align: left;
+  padding: 20px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.flyer ul li:before {
+  content: "✖";
+   left: -18px;
+   font-size: 16px;
+   position: absolute;
+}
+
+.flyer ul li {
+  padding: 5px;
+  line-height: 1.1;
+  font-size: 18px;
+  overflow: visible;
+  padding-left: 17px;
+  position: relative;
+
+}
+
+.flyer button {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: 5px;
+}
+.flyer button:hover {
+  opacity: 0.8;
+}
+
+.flyer .header {
+  background: rgba(0,0,0,0.1);
+  padding: 15px;
+
+}
+
+.flyer h1 {
+  text-shadow: 1px 1px rgba(255,255,255,1);
+  color: #333;
+  text-align: center;
+  font-size: 32px;
+  line-height: 0.8;
+}
+
+.flyer h2 {
+  text-shadow: 1px 1px rgba(255,255,255,1);
+  font-size: 24px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  line-height: 0.9;
+}
+
+.flyer h3 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 35px;
+  line-height: 1.3;
+}
+
+#logo {
+  color: rgb(57, 69, 75);
+  position: absolute;
+  left: 1em;
+  top: -10px;
+  height: 3em;
+  line-height: 3em;
+  letter-spacing: -1px;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-weight: 900;
+  font-size: 17.6px !important;
+
+}
+
+sup {
+    position: relative;
+  top: -0.5em;
+  font-size: 0.8em;
+}
+
+.nav li {
+  display: inline-block;
+}
