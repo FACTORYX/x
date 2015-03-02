@@ -35,7 +35,7 @@
   video#bgvid { display: none;}
 
   #events .flyer {
-    padding-top: 60px !important;
+    padding-top: 30px !important;
     height: 100vh !important;
   }
   #contact .flyer {
@@ -59,6 +59,9 @@
   .flyer h3 {
     font-size: 14px !important;
   }
+  .flyer ul li {
+    font-size: 14px !important;
+  }
   header {
     position: relative !important;
     height: 42px;
@@ -78,10 +81,9 @@
 }
 
 .screen {
-  /*
+  
   min-height: 100vh;
   min-width: 100vw;
-  */
   padding-top: 15vh;
 
 }
