@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="vendor/startup/css/icon-font.css">
         <!-- end -->
         <link rel="stylesheet" href="css/style.css">
+
     </head>
 
     <body>
@@ -27,16 +28,16 @@
 
                 <ul class="nav pull-right">
                     <li>
-                        <a href="#events">Events</a>
+                        <a href="#events" class ="nav-link">Events</a>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#about" class ="nav-link">About</a>
                     </li>
                     <li class="active">
-                        <a href="#fellowship">Fellowship</a>
+                        <a href ="#fellowship" class ="nav-link">Fellowship</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact" class ="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -207,6 +208,16 @@ Questions about FactoryX Fellowship? Contact us at: <a href ="mailto:fellowship@
         </footer>-->
 
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="vendor/startup/js/jquery-1.10.2.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script>
+        $('.nav-link').click(function(e){
+            console.log(e)
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $(e.currentTarget.hash).offset().top
+            }, 200);
+        });
+        </script>
+
     </body>
 </html>
