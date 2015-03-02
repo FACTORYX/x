@@ -186,6 +186,33 @@ header .nav a:hover {
 
 }
 
+input[type=submit] {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: 5px;
+
+}
+
+input[type=email], input[type=text] {
+ width: 315px;
+ height: 50px;
+ border-bottom-color: #ccc;
+ border-left-color: #ccc; 
+ border-top-color: #ccc;
+ border-right-color: #ccc;
+}
+textarea {
+ width: 315px;
+ border-bottom-color: #ccc;
+ border-left-color: #ccc; 
+ border-top-color: #ccc;
+ border-right-color: #ccc;
+}
+
 .flyer button {
   background-color: #27ae60;
   color: #fff;

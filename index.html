@@ -10,8 +10,6 @@
         <link rel="stylesheet" href="vendor/flat-ui/bootstrap/css/bootstrap.css">
         <link rel="stylesheet" href="vendor/flat-ui/bootstrap/css/bootstrap-responsive.css">
         <link rel="stylesheet" href="vendor/flat-ui/css/flat-ui.css">
-        <!-- Using only with Flat-UI (free)-->
-        <link rel="stylesheet" href="vendor/startup/css/icon-font.css">
         <!-- end -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -157,7 +155,7 @@ For all the innovation in the valley, one thing we've never taken a deep look at
 
 <!-- FELLOWSHIP -->
 
-<div id = "contact" class = "screen">
+<div id = "contact" class = "screen" style="padding-top: 10vh">
         <center>
             <section class="flyer">
             <div class = "header">
@@ -167,11 +165,31 @@ For all the innovation in the valley, one thing we've never taken a deep look at
             </div>
 
             <div>
-                <h3 style="font-weight: normal;margin-top: 30px; line-height: 1.5">
+                <h3 style="font-weight: normal;margin-top: 0; line-height: 1.5">
 Questions about FactoryX? Contact us at: <a href= "mailto:contact@fact0ry.com">contact@fact0ry.com</a>
 <br/>
 Questions about FactoryX Fellowship? Contact us at: <a href ="mailto:fellowship@fact0ry.com">fellowship@fact0ry.com</a>
 </h3>
+
+    <!-- Contact Form -->
+    <form method="post" action="http://formspree.io/contact@fact0ry.com" style="margin-top: 30px;">
+        <div class="row 50%">
+            <div class="6u"><input type="text" name="name" placeholder="Name" class="form-control input-hg" /></div>
+            <div class="6u"><input type="email" name="_replyto" placeholder="Email" /></div>
+        </div>
+        <div class="row 50%">
+            <div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+        </div>
+        <div class="row">
+            <div class="12u">
+                <center>
+                    <input type="submit" value="Send Message" />
+
+                </center>
+            </div>
+        </div>
+    </form>
+
             </div>
             </section>
         </center>
@@ -210,13 +228,24 @@ Questions about FactoryX Fellowship? Contact us at: <a href ="mailto:fellowship@
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script>
-        $('.nav-link').click(function(e){
-            console.log(e)
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $(e.currentTarget.hash).offset().top
-            }, 200);
+        $(document).ready(function(){
+    
+            $('.nav-link').click(function(e){
+                console.log(e)
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $(e.currentTarget.hash).offset().top
+                }, 200);
+            });
+            /*
+            $('.flyer').onScreen({
+                doIn: function(){
+                    console.log('in')
+                }
+            });
+            */
         });
+
         </script>
 
     </body>
