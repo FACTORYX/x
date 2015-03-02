@@ -15,12 +15,18 @@
 
   body {
     margin: 0;
+    background-color: #fff
+  }
+  html {
+    background-color: #fff
   }
   .screen {
-    background-image: url('../img/use_your_illusion.png');
-    padding-top: 0 !important;
+    padding: 20px !important;
   }
-
+  header {
+    height: 40px !important;
+    text-align: center !important;
+  }
   video#bgvid { display: none;}
 
   #events .flyer {
@@ -28,24 +34,37 @@
     height: 100vh !important;
   }
   #contact .flyer {
-    padding-top: 100px !important;
+    padding-top: 50px !important;
     height: 100vh !important;
   }
 
   .flyer {
-    background: url('../img/dust.png');
     opacity: 1 !important;
     width: 100% !important;
-    margin-top: 1px !important; 
-    height: 100% @important;
+    padding-bottom: 20px !important; 
+    padding: 20px !important;
+
+  }
+  .flyer h1 {
+    font-size: 22px;
+  }
+  .flyer h2 {
+    font-size: 18px;
+  }
+  .flyer h3 {
+    font-size: 14px;
   }
   header {
+    position: relative !important;
+    height: 42px;
     border-bottom: 1px solid #666;
   }
 
   #logo {
-    position: relative !important;
-    z-index: 300;
+    position: absolute;
+    top: 3px !important;
+    line-height:1 !important;
+    z-index: 1000;
   }
   .nav {
     display: none;
