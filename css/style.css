@@ -13,6 +13,11 @@
 
 @media only screen and (max-device-width: 480px) {
 
+
+  input[type=email], input[type=text], textarea {
+    width: 70vw !important;
+  }
+
   body {
     margin: 0;
     background-color: #fff
@@ -73,8 +78,10 @@
 }
 
 .screen {
+  /*
   min-height: 100vh;
   min-width: 100vw;
+  */
   padding-top: 15vh;
 
 }
@@ -102,15 +109,6 @@
 }
 #fellowship .flyer { opacity: 1; }
 
-video#bgvid {
-  position: fixed; right: 0; bottom: 0; top: 0;
-  width: 70hw; 
-  height: 70vw; 
-  z-index: -100;
-  /*background: url(polina.jpg) no-repeat;*/
-  background-size: cover;
-  opacity: 0.6;
-}
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
