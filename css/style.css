@@ -18,6 +18,10 @@
     width: 70vw !important;
   }
 
+  .combined {
+    width: 100px;
+  }
+
   body {
     margin: 0;
     background-color: #fff
@@ -86,6 +90,10 @@
   min-width: 100vw;
   padding-top: 15vh;
 
+}
+
+.combined {
+  width: 150px;
 }
 
 #events {
