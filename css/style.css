@@ -19,7 +19,7 @@
   }
 
   .combined {
-    width: 100px;
+    /*width: 100px;*/
   }
 
   body {
@@ -93,7 +93,7 @@
 }
 
 .combined {
-  width: 150px;
+  width: 40vw;
 }
 
 #events {
