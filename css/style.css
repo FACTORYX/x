@@ -171,12 +171,13 @@ header .nav a:hover {
   opacity: 1;
   width: 60%;
   padding: 40px;
-  padding-top: 20px;
+  padding-top: 15px;
 
 }
 
 #events .flyer {
   padding: 40px;
+  padding-top: 15px;
 }
 #events .flyer h3 {
   font-size: 18px;
@@ -185,15 +186,7 @@ header .nav a:hover {
 .flyer ul {
   text-align: left;
   padding: 20px;
-  list-style: none;
   margin-bottom: 20px;
-}
-
-.flyer ul li:before {
-  content: "-";
-   left: -8px;
-   font-size: 16px;
-   position: absolute;
 }
 
 .flyer ul li {
