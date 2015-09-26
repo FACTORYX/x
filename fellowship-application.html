@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>FactoryX Fellowship Application</title>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="shortcut icon" href="vendor/flat-ui/images/favicon.ico">
+        <link rel="stylesheet" href="vendor/flat-ui/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="vendor/flat-ui/bootstrap/css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="vendor/flat-ui/css/flat-ui.css">
+        <!-- end -->
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+  ._form {
+  position:relative;
+  background:#fff;
+  width:400px;/*F*/
+  padding:0!important;
+  text-align:left;
+  }
+  ._form em {
+  color:#9a9a9a;
+  }
+  ._form a {
+  margin-left:3px;
+  }
+  ._form ._field,
+  ._form ._field ._label,
+  ._form ._type_radio,
+  ._form ._type_checkbox,
+  ._form ._type_captcha,
+  ._form ._field table {
+  background:none;
+  }
+  ._form ._field  {
+  position:relative;
+  width:100%;
+  cursor:move;
+  font-style:normal;
+  margin:1.2em 0;
+  padding:0;
+  overflow:hidden;
+  }
+  ._form ._field input[type="text"] {
+  width:100%;
+  padding:8px;
+  font-size:16px;
+  border:1px solid #b6b6b6;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  ._form ._field ._label {
+  display:block;
+  margin:0 0 0.5em;
+  padding:0!important;
+  font-family:helvetica,arial,sans-serif;
+  font-size:15px;
+  }
+  ._form ._field ._option input[type="checkbox"],
+  ._form ._field ._option input[type="radio"] {
+  position:relative;
+  width:13px;
+  height:13px;
+  margin:-4px 0 0 1px;
+  cursor:pointer;
+  vertical-align:middle;
+  }
+  ._form ._field ._option input[type="submit"],
+  ._form ._field ._option input[type="button"] {
+  margin:0;
+  cursor:pointer;
+  height:35px;
+  width:auto;
+  font-size:15px;
+  }
+  ._form ._field ._option select {
+  display:block;
+  margin:0;
+  padding:0;
+  width:auto;
+  font-size:15px;
+  border:1px solid #b6b6b6;
+  }
+  ._form ._type_radio ._option,
+  ._form ._type_checkbox ._option {
+  font-size:13px;
+  font-weight:normal;
+  line-height:1.8;
+  }
+  ._form ._type_date ._option input[type="text"] {
+  float:left;
+  width:100px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  ._form ._type_date ._option input[type="button"] {
+  width:37px;
+  height:36px;
+  margin-left:5px;
+  padding:20px;
+  background:url(http://factoryx.activehosted.com/admin/css/../images/icon_calendar.gif) no-repeat 0 0;
+  border:none;
+  outline:none;
+  text-indent:-9999px;
+  }
+  ._form ._type_captcha img {
+  float:left;
+  margin:0 6px 0 0;
+  width:70px;
+  height:33px;
+  border:1px solid #b6b6b6;
+  }
+  ._form ._type_captcha input[type="text"] {
+  margin:-14px 0 0 0!important;
+  width:25%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  ._form ._field table  {
+  width:100%!important;
+  }
+  ._form ._field table tbody tr td  {
+  width:50%!important;
+  font-size:15px;
+  }
+  ._form {
+  width:400px;/*F*/
+  background:#fff;
+  color:#2c2c2c;
+  font-weight:normal;
+  }
+  ._form #notice {
+  margin:10px 0 0 -3px!important;
+  padding:0;
+  color:#acacac;
+  font-size:11px;
+  font-family:helvetica,arial,sans-serif;
+  }
+  ._form #notice a:link, ._form #notice a:visited {
+  color:#acacac;
+  text-decoration:underline;
+  }
+  ._form ._field  {
+  position:relative;
+  width:100%;
+  cursor:default;
+  font-style:normal;
+  margin:0 0 16px;
+  padding:0;
+  overflow:hidden;
+  }
+  ._form ._field input[type="text"],
+  ._form ._field input[type="email"] {
+  width:100%;
+  padding:4px;
+  font-size:14px;
+  background:#fafafa;
+  border:1px solid #c7c7c7;
+  border-top:1px solid #b6b6b6;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  ._form ._field ._label {
+  margin:0 0 4px;
+  color:#2c2c2c;
+  font-size:13px;
+  font-family:helvetica,arial,sans-serif;
+  font-weight:700;
+  }
+  ._form ._field ._option {
+  margin:0;
+  padding:0;
+  color:#2c2c2c;
+  font-size:13px;
+  font-family:helvetica,arial,sans-serif;
+  font-weight:normal;
+  line-height:20px;
+  }
+  ._form ._type_header ._label {
+  width:100%;
+  font-style:normal;
+  font-size:16px!important;
+  line-height:20px;
+  color:#005698;
+  margin:0 0 5px!important;
+  padding:0 0 10px!important;
+  overflow:hidden;
+  border-bottom:1px solid #e0e0e0;
+  }
+  ._form ._type_input ._option  textarea{
+  width:97%!important;
+  background:#fafafa;
+  border:1px solid #c7c7c7;
+  border-top:1px solid #b6b6b6;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  }
+  ._form ._type_input ._option input[type="submit"],
+  ._form ._type_input ._option input[type="button"] {
+  width:auto;
+  margin:10px 0 0!important;
+  padding:2px 15px!important;
+  cursor:pointer;
+  font-family:verdana,arial,sans-serif;
+  font-weight:700;
+  font-size:12px;
+  color:#3f3f3f;
+  background:#f7f7f7 url(http://factoryx.activehosted.com/admin/templates/form-themes/compact-basic/images/btn_bg.gif) repeat-x 0 0;
+  border:1px solid #999999;
+  border-bottom:1px solid #888888;
+  text-align:center;
+  }
+  ._form ._type_input ._option input[type="submit"]:hover,
+  ._form ._type_input ._option input[type="button"]:hover {
+  border:1px solid #afafaf;
+  border-bottom:1px solid #a5a5a5;
+  background:#f7f7f7;
+  color:#525252;
+  }
+  ._form ._type_date ._option input[type="text"] {
+  float:left;
+  width:100px;
+  }
+  ._form ._type_radio ._option label {
+  display:inline;
+  font-size:14px;
+  font-weight:normal;
+  line-height:18px;
+  }
+  ._form ._type_radio ._option label input[type="radio"] {
+  position:relative;
+  width:13px;
+  height:13px;
+  margin:-4px 0 0 1px;
+  cursor:pointer;
+  vertical-align:middle;
+  line-height:20px;
+  }
+  ._form ._type_date ._option input[type="button"] {
+  width:24px;
+  height:24px;
+  margin:2px 0 0 5px;
+  padding:0;
+  background:url(http://factoryx.activehosted.com/admin/templates/form-themes/compact-basic/images/icon_calendar.gif) no-repeat 0 0;
+  border:none;
+  outline:none;
+  text-indent:-9999px;
+  }
+  ._form ._field ._option select {
+  display:block;
+  margin:0;
+  padding:0;
+  width:auto;
+  font-size:14px;
+  border:1px solid #b6b6b6;
+  }
+  ._form ._type_captcha img {
+  float:left;
+  width:42px;
+  height:24px;
+  margin:0 6px 0 0;
+  border:1px solid #b6b6b6;
+  }
+  ._form ._type_captcha input[type="text"] {
+  float:left;
+  margin:0!important;
+  width:40%;
+  font-size:14px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  ._form ._field table {
+  margin:0;
+  padding:0;
+  border-collapse:collapse;
+  width:100%!important;
+  table-layout:fixed;
+  margin-bottom:18px;
+  font-size:13px!important;
+  border-collapse:collapse;
+  border-spacing:0;
+  }
+  ._form ._field table td {
+  padding:0 10px 0 0!important;
+  line-height:18px;
+  text-align:left;
+  font-size:13px!important;
+  color:#606060;
+  }
+  ._form ._type_input ._option  table tbody#_forward_rcpt input {margin:0 0 4px 0; width:96%!important;}
+  ._form ._type_input ._option  table tbody#_forward_rcpt img.image_addrcpt {cursor:pointer;}
+  .form_errors{
+  text-align:center;
+  font-size:15px;
+  margin:10px;
+  color:#900;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  margin-bottom:20px;
+  }
+  ._form ._field ._note {
+  margin-bottom: 4px;
+  }
+</style>
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', 'UA-66569970-2', 'auto');
+          ga('send', 'pageview');
+        
+        </script>
+
+    </head>
+
+    <body>
+
+        <header>
+                <h1 id="logo">
+                    FACTORY
+                    <sup>x</sup>
+                </h1>
+
+            <div class="nav-collapse collapse">
+
+                <ul class="nav pull-right">
+                    <li>
+                        <a href="/" class ="nav-link">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+
+        <div  class = "screen">
+        <center>
+            <section class="flyer">
+             <div class = "header">
+                <h1>
+                FactoryX Fellowship Application
+                </h1>
+
+            </div>
+
+                <div style="font-size:17px; line-height: 1.5; margin-bottom:50px;">
+
+                For all the innovation in the valley, one thing we've never taken a deep look at is the nature of companies themselves. For half a millennium, we've strengthened corporations at the expense of individual empowerment and benefit to society. FactoryX is a bold experiment to revise the nature of companies themselves and re-invent entrepreneurship from the ground up.<br><br>
+                We’re looking for entrepreneurs, makers, and innovators to collaborate and co-create new companies with us using the rapid prototyping process. Interested in joining us full-time, part-time, and/or in an advisory capacity?  Let us know what excites you most!<br><br>
+                Note: We are looking for people with all different skill sets from engineers to writers, designers, sales/marketing experts, accountants, recruiters and more.
+
+                </div>
+              
+<form action='//factoryx.activehosted.com/proc.php' method='post' id='_form_83' accept-charset='utf-8' enctype='multipart/form-data'>
+  <input type='hidden' name='f' value='83'>
+  <input type='hidden' name='s' value=''>
+  <input type='hidden' name='c' value='0'>
+  <input type='hidden' name='m' value='0'>
+  <input type='hidden' name='act' value='sub'>
+  <input type='hidden' name='nlbox[]' value='4'>
+  <div class='_form'>
+    <div class='formwrapper'>
+      <div id='_field265'>
+        <div id='compile265' class='_field _type_input'>
+          <div class='_label '>
+            Full Name
+          </div>
+          <div class='_option'>
+            <input type='text' name='fullname' >
+          </div>
+        </div>
+      </div>
+      <div id='_field274'>
+        <div id='compile274' class='_field _type_input'>
+          <div class='_label '>
+            Where are you currently based?
+          </div>
+          <div class='_note'>
+            We’re looking for people from the Bay Area (our HQ is in San Francisco) and around the world.
+          </div>
+          <div class='_option'>
+            <input type='text' name='field[41]' value=''>
+          </div>
+        </div>
+      </div>
+      <div id='_field275'>
+        <div id='compile275' class='_field _type_radio'>
+          <div class='_label '>
+            Are you authorized to work in the United States?
+          </div>
+          <div class='_option'>
+            <div>
+              <label>
+                <input type='radio' name='field[7]' value='Yes.' >
+                Yes.
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='radio' name='field[7]' value='No.' >
+                No.
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='radio' name='field[7]' value='It's complicated.' >
+                It's complicated.
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='_field276'>
+        <div id='compile276' class='_field _type_input'>
+          <div class='_label '>
+            Phone
+          </div>
+          <div class='_option'>
+            <input type='text' name='phone' >
+          </div>
+        </div>
+      </div>
+      <div id='_field266'>
+        <div id='compile266' class='_field _type_input'>
+          <div class='_label '>
+            Email *
+          </div>
+          <div class='_option'>
+            <input type='email' name='email' >
+          </div>
+        </div>
+      </div>
+      <div id='_field277'>
+        <div id='compile277' class='_field _type_radio'>
+          <div class='_label '>
+            Have you attended a FactoryX: Future of Work Talk & Rapid Prototyping Workshop at our office?
+          </div>
+          <div class='_option'>
+            <div>
+              <label>
+                <input type='radio' name='field[19]' value='Yes.' >
+                Yes.
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='radio' name='field[19]' value='Not Yet.' >
+                Not Yet.
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='_field278'>
+        <div id='compile278' class='_field _type_input'>
+          <div class='_label '>
+            How did you hear about FactoryX?
+          </div>
+          <div class='_option'>
+            <input type='text' name='field[52]' value=''>
+          </div>
+        </div>
+      </div>
+      <div id='_field281'>
+        <div id='compile281' class='_field _type_checkbox' style='margin-bottom: 0;'>
+          <div class='_label '>
+            What are you interested in?
+          </div>
+          <div class='_note'>
+            Check all that apply
+          </div>
+          <div class='_option'>
+            <input type='hidden' name='field[55][]' value='~|'>
+            <div>
+              <label>
+                <input type='checkbox' name='field[55][]' value='Being on the Executive Team of a new spin-out company, full-time.' >
+                Being on the Executive Team of a new spin-out company, full-time.
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='checkbox' name='field[55][]' value='Contributing to FactoryX projects/companies on a part-time basis for equity.' >
+                Contributing to FactoryX projects/companies on a part-time basis for equity.
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='checkbox' name='field[55][]' value='Participating in future events, workshops, or experiments.' >
+                Participating in future events, workshops, or experiments.
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='checkbox' name='field[55][]' value='Not sure yet, but I'd like to stay in touch and receive occasional updates.' >
+                Not sure yet, but I'd like to stay in touch and receive occasional updates.
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='_field282'>
+        <div id='compile282' class='_field _type_input'>
+          <div class='_option'>
+            Other: <input type='text' name='field[56]' value=''>
+          </div>
+        </div>
+      </div>
+      <div id='_field280'>
+        <div id='compile280' class='_field _type_checkbox' style='margin-bottom: 0;'>
+          <div class='_label '>
+            Which of the following do you have experience in?
+          </div>
+          <div class='_note'>
+            We aren't only looking for people who fit these descriptions. Use the "other" option to tell us about yourself.
+          </div>
+          <div class='_option'>
+            <input type='hidden' name='field[11][]' value='~|'>
+            <div>
+              <label>
+                <input type='checkbox' name='field[11][]' value='Engineering (HW/SW/ME)' >
+                Engineering (HW/SW/ME)
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='checkbox' name='field[11][]' value='Design/user research' >
+                Design/user research
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='checkbox' name='field[11][]' value='Sales/marketing' >
+                Sales/marketing
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='checkbox' name='field[11][]' value='Accounting/legal/operations' >
+                Accounting/legal/operations
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='checkbox' name='field[11][]' value='Product management' >
+                Product management
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='checkbox' name='field[11][]' value='Recruitment/human resources' >
+                Recruitment/human resources
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type='checkbox' name='field[11][]' value=' Rapid prototyping' >
+                Rapid prototyping
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='_field287'>
+        <div id='compile287' class='_field _type_input'>
+          <div class='_option'>
+            Other: <input type='text' name='field[57]' value=''>
+          </div>
+        </div>
+      </div>
+      <div id='_field283'>
+        <div id='compile283' class='_field _type_input'>
+          <div class='_label '>
+            Designers and developers - please list your programming / design tool proficiencies:
+          </div>
+          <div class='_option'>
+            <input type='text' name='field[47]' value=''>
+          </div>
+        </div>
+      </div>
+      <div id='_field284'>
+        <div id='compile284' class='_field _type_input'>
+          <div class='_label '>
+            Github / Portfolio Link / LinkedIn:
+          </div>
+          <div class='_note'>
+            We're all about rapid iteration so don't worry about getting this perfect, just share what you have.
+          </div>
+          <div class='_option'>
+            <input type='text' name='field[48]' value=''>
+          </div>
+        </div>
+      </div>
+      <div id='_field285'>
+        <div id='compile285' class='_field _type_input'>
+          <div class='_label '>
+            What change would you like to see in the world in your lifetime?
+          </div>
+          <div class='_option'>
+            <input type='text' name='field[49]' value=''>
+          </div>
+        </div>
+      </div>
+      <div id='_field286'>
+        <div id='compile286' class='_field _type_input'>
+          <div class='_label '>
+            Free space
+          </div>
+          <div class='_note'>
+            Anything else you want to share? E.g. - What makes you come alive? Meaningful past projects or unique experiences, additional thoughts, etc?
+          </div>
+          <div class='_option'>
+            <input type='text' name='field[51]' value=''>
+          </div>
+        </div>
+      </div>
+      <div id='_field267'>
+        <div id='compile267' class='_field _type_input'>
+          <input type='submit' value="Submit Application" class='btn'>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+                
+
+            </section>
+
+        </center>
+
+        </div>
+
+    </body>
+</html>
